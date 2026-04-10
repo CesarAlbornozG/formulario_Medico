@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Medico</title>
+</head>
+
+<body>
+    <h1>Ficha Medica</h1>
+    <!-- Creo formulario con todos los atributos solicitados utilizando id para realizar luego las verificaciones en el archivo js y añado el atributo required para que obligue el sistema al usuario rellenar el campo con algun valor -->
+    <form id="formFicha">
+
+        <label for="rut">RUT:</label>
+        <input type="text" id="rut" placeholder="Ej: 20207106-6" required><br><br>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombres" required> <br><br>
+
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" required><br><br>
+
+        <label for="direccion">Direccion:</label>
+        <input type="text" id="direccion" required><br><br>
+
+        <label for="ciudad">Ciudad:</label>
+        <input type="text" id="ciudad" required><br><br>
+
+        <label for="telefono">Telefono:</label>
+        <input type="tel" id="telefono" placeholder="+5691324432" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required><br><br>
+
+        <label for="fecha">Fecha de nacimiento:</label>
+        <input type="date" id="fecha" required><br><br>
+
+        <label for="estado">Estado civil:</label>
+        <select id="estado" required>
+            <option value="">Seleccione una opcion..</option>
+            <option value="Soltero">Soltero</option>
+            <option value="Casado">Casado</option>
+            <option value="Divorciado">Divordiado</option>
+            <option value="Viudo">Viudo</option>
+        </select><br><br>
+
+        <label for="comentarios">Comentarios:</label>
+        <textarea id="comentarios"></textarea><br><br>
+
+        <!-- Al hacer click en el boton se llamara a la funcion en el archivo js para ejecutarla -->
+        <button type="button" onclick="guardarRegistro()">Guardar</button>
+        <button type="reset">Limpiar</button>
+        <button type="button" onclick="cerrarFormulario()">Cerrar</button>
+
+
+    </form>
+
+    <script src="javascript.js"></script>
+
+</body>
+
+</html>
